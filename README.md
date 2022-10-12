@@ -7,7 +7,7 @@ Descrição do projeto.
 2. Crie um virtualenv com Python 3.10
 3. Ative o ambiente
 4. Instale as dependências
-5. Faça uma cópia do ENV_SAMPLE na raiz do projeto e configure as variáveis sensiveis
+5. Faça uma cópia do env_sample na raiz do projeto e configure as variáveis sensiveis
 6. Execute as migrations
 7. Crie um super usuário
 8. Execute a aplicação
