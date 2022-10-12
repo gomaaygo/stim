@@ -1,0 +1,8 @@
+SECRET_KEY=
+ALLOWED_HOSTS=127.0.0.1, .localhost, .herokuapp.com
+DEBUG=TRUE
+DB_NAME=stim
+DB_USER=postgres
+DB_PASS=postgres
+DB_HOST=localhost
+DB_PORT=5432
