@@ -22,3 +22,6 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 ```
+
+## Protótipo
+https://www.figma.com/file/pUp4uQKzMpO4IcVgAXggim/stim-prototipo?node-id=0%3A1
