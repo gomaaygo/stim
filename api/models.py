@@ -19,3 +19,21 @@ class AQChild(models.Model):
 
     def __str__(self) -> str:
         return str(self.result)
+    
+class Person(models.Model):
+    CHOICES_GENDER = (
+        ("f", "Feminino"),
+        ("m", "Masculino"),
+    )
+    
+    age = models.IntegerField(verbose_name="Idade", blank=True, null=True)
+    gender = models.CharField(max_length=1, verbose_name="Gênero", choices=CHOICES_GENDER)
+    used_app_before = models.BooleanField(verbose_name="Utilizou aplicativo antes?", blank=True, null=True)
+    austim = models.BooleanField(verbose_name="Possui algum parente autista?", blank=True, null=True)
+    class_asd = models.BooleanField(verbose_name="Class ASD", blank=False, null=False)
+    
+    class Meta:
+        verbose_name = 'Pessoa'
+
+    def __str__(self) -> str:
+        return str(self.class_asd)
