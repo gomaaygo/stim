@@ -31,6 +31,7 @@ class Person(models.Model):
     used_app_before = models.BooleanField(verbose_name="Utilizou aplicativo antes?", blank=True, null=True)
     austim = models.BooleanField(verbose_name="Possui algum parente autista?", blank=True, null=True)
     class_asd = models.BooleanField(verbose_name="Class ASD", blank=False, null=False)
+    jaundice = models.BooleanField(verbose_name="Nasceu com icterícia?", blank=True, null=True)
     
     class Meta:
         verbose_name = 'Pessoa'
