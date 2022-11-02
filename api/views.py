@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from .serializers import AQChildSerializer
 
-# Create your views here.
+from .models import AQChild
+
+from rest_framework import viewsets
+
+
+class AQChildViewSet(viewsets.ModelViewSet):
+    serializer_class = AQChildSerializer
+    queryset = AQChild.objects.all()
