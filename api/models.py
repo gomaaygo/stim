@@ -33,7 +33,7 @@ class AQChild(models.Model):
     a9_score = models.IntegerField(verbose_name="AQ-9", blank=False, null=False)
     a10_score = models.IntegerField(verbose_name="AQ-10", blank=False, null=False)
     person = models.ForeignKey(Person, on_delete=models.CASCADE, blank=False, null=True)
-    result = models.IntegerField(verbose_name="Resultado", blank=False, null=False)
+    result = models.IntegerField(verbose_name="Resultado", blank=True, null=True)
     
     class Meta:
         verbose_name = 'Escala AQ-10 - Criança'
