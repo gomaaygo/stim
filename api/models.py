@@ -11,7 +11,7 @@ class Person(models.Model):
     gender = models.CharField(max_length=1, verbose_name="Gênero", choices=CHOICES_GENDER)
     used_app_before = models.BooleanField(verbose_name="Utilizou aplicativo antes?", blank=True, null=True)
     austim = models.BooleanField(verbose_name="Possui algum parente autista?", blank=True, null=True)
-    class_asd = models.BooleanField(verbose_name="Class ASD", blank=False, null=False)
+    class_asd = models.BooleanField(verbose_name="Class ASD", blank=True, null=True)
     jaundice = models.BooleanField(verbose_name="Nasceu com icterícia?", blank=True, null=True)
     
     class Meta:
@@ -40,3 +40,10 @@ class AQChild(models.Model):
 
     def __str__(self) -> str:
         return str(self.result)
+    
+    def save(self, *args, **kwargs):
+        result = sum([self.a1_score, self.a2_score, self.a3_score, self.a4_score, self.a5_score, 
+                      self.a6_score, self.a7_score, self.a8_score, self.a9_score, self.a10_score])
+        self.result = result
+
+        super().save(*args, **kwargs)

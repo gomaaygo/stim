@@ -1,6 +1,6 @@
-from .serializers import AQChildSerializer, PersonSerializer
+from .serializers import AQChildSerializer
 
-from .models import AQChild, Person
+from .models import AQChild
 
 from rest_framework import viewsets
 
@@ -8,8 +8,3 @@ from rest_framework import viewsets
 class AQChildViewSet(viewsets.ModelViewSet):
     serializer_class = AQChildSerializer
     queryset = AQChild.objects.all()
-    
-
-class PersonViewSet(viewsets.ModelViewSet):
-    serializer_class = PersonSerializer
-    queryset = Person.objects.all()
