@@ -4,6 +4,7 @@ distlib==0.3.6
 dj-database-url==1.0.0
 Django==4.1.2
 django-heroku==0.3.1
+djangorestframework==3.14.0
 filelock==3.8.0
 gunicorn==20.1.0
 pipenv==2022.10.11
@@ -11,6 +12,7 @@ pipfile==0.0.2
 platformdirs==2.5.2
 psycopg2==2.9.4
 python-decouple==3.6
+pytz==2022.6
 sqlparse==0.4.3
 toml==0.10.2
 virtualenv==20.16.5
